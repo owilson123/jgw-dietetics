@@ -1,0 +1,113 @@
+/* ── Google Fonts (must come first) ──────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ── Design Tokens ────────────────────────────────────────── */
+:root {
+  /* Brand palette */
+  --sage:         #4a6741;
+  --sage-light:   #6b8f62;
+  --sage-pale:    #e8efe6;
+  --eucalyptus:   #7a9e7e;
+  --off-white:    #faf8f4;
+  --terracotta:   #c17f5a;
+  --terracotta-pale: #f5ede6;
+  --stone:        #b8a99a;
+  --stone-pale:   #f0ece8;
+  --charcoal:     #2d3530;
+  --charcoal-mid: #4a5550;
+  --gold:         #c9a84c;
+  --gold-pale:    #fdf6e3;
+
+  /* shadcn tokens → mapped to our palette */
+  --background:             oklch(0.99 0.004 90);
+  --foreground:             oklch(0.20 0.012 150);
+  --card:                   oklch(1 0 0);
+  --card-foreground:        oklch(0.20 0.012 150);
+  --popover:                oklch(1 0 0);
+  --popover-foreground:     oklch(0.20 0.012 150);
+  --primary:                oklch(0.42 0.07 145);   /* sage */
+  --primary-foreground:     oklch(0.99 0 0);
+  --secondary:              oklch(0.93 0.02 90);    /* stone-pale */
+  --secondary-foreground:   oklch(0.25 0.01 150);
+  --muted:                  oklch(0.95 0.008 90);
+  --muted-foreground:       oklch(0.50 0.01 150);
+  --accent:                 oklch(0.70 0.07 145);   /* eucalyptus */
+  --accent-foreground:      oklch(0.99 0 0);
+  --destructive:            oklch(0.577 0.245 27.325);
+  --border:                 oklch(0.88 0.01 90);
+  --input:                  oklch(0.92 0.01 90);
+  --ring:                   oklch(0.42 0.07 145);
+  --radius:                 0.75rem;
+}
+
+@theme inline {
+  --color-background:           var(--background);
+  --color-foreground:           var(--foreground);
+  --color-card:                 var(--card);
+  --color-card-foreground:      var(--card-foreground);
+  --color-primary:              var(--primary);
+  --color-primary-foreground:   var(--primary-foreground);
+  --color-secondary:            var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted:                var(--muted);
+  --color-muted-foreground:     var(--muted-foreground);
+  --color-accent:               var(--accent);
+  --color-accent-foreground:    var(--accent-foreground);
+  --color-border:               var(--border);
+  --color-input:                var(--input);
+  --color-ring:                 var(--ring);
+  --color-destructive:          var(--destructive);
+  --radius-sm:  calc(var(--radius) * 0.6);
+  --radius-md:  calc(var(--radius) * 0.8);
+  --radius-lg:  var(--radius);
+  --radius-xl:  calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --font-sans:    'Inter', system-ui, sans-serif;
+  --font-serif:   'Instrument Serif', Georgia, serif;
+}
+
+/* ── Base ─────────────────────────────────────────────────── */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply scroll-smooth;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* ── Utilities ────────────────────────────────────────────── */
+@layer utilities {
+  .font-serif {
+    font-family: 'Instrument Serif', Georgia, serif;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+  .container-narrow {
+    @apply mx-auto max-w-3xl px-4 sm:px-6;
+  }
+  .container-wide {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+}
