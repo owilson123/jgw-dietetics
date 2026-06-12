@@ -10,7 +10,6 @@ const navLinks = [
   { href: '/about', label: 'About Jackie' },
   { href: '/services', label: 'Services' },
   { href: '/programmes', label: 'Pricing' },
-  { href: '/recipes', label: 'Recipes' },
   { href: '/success-stories', label: 'Testimonials' },
   { href: '/disclosure', label: 'Disclosure & Privacy' },
   { href: '/contact', label: 'Contact' },
