@@ -9,6 +9,7 @@ const specialisms = [
   'IBS & Digestive Health',
   'Low FODMAP Programme',
   'Type 1 & 2 Diabetes',
+  'GLP-1 Medication Support',
   'Lifestyle Nutrition',
   'Family Nutrition',
 ]

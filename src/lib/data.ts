@@ -157,6 +157,33 @@ export const services = [
     ],
     colour: 'sage',
   },
+  {
+    slug: 'glp1-weight-management',
+    title: 'GLP-1 Medication & Weight Management',
+    shortTitle: 'GLP-1 Support',
+    icon: '⚕️',
+    tagline: 'Making the most of your medication through expert nutrition.',
+    description:
+      'GLP-1 medications such as semaglutide (Wegovy, Ozempic) and tirzepatide (Mounjaro) are increasingly prescribed for weight management and Type 2 diabetes — but medication alone is only part of the picture. Specialist dietetic support is essential to protect muscle mass, manage nutritional intake on a reduced appetite, and build the habits that determine long-term outcomes.',
+    symptoms: [
+      'Recently prescribed a GLP-1 medication and unsure how to adapt your diet',
+      'Struggling with nausea, reduced appetite, or food aversions on medication',
+      'Concerned about muscle loss or nutritional adequacy',
+      'Wanting to maximise and sustain the results from treatment',
+      'Planning to transition off medication and maintain progress',
+    ],
+    howHelps:
+      'With over 30 years of NHS experience — including extensive work in diabetes and weight management — Jackie provides evidence-based nutritional guidance tailored to people on GLP-1 therapies. She focuses on adequate protein intake, preserving lean muscle, managing the practical challenges of reduced appetite, and building a sustainable dietary pattern that supports your health well beyond the course of treatment. This is clinical nutrition support delivered with the same rigour and compassion she brings to every client.',
+    outcomes: [
+      'Nutritional adequacy maintained on a reduced appetite',
+      'Muscle mass preserved through targeted protein guidance',
+      'Reduced side-effect impact through informed food choices',
+      'Sustainable dietary habits that outlast the medication',
+      'Improved long-term weight management outcomes',
+      'Confidence navigating eating, social occasions, and everyday life',
+    ],
+    colour: 'eucalyptus',
+  },
 ]
 
 // ── Testimonials ──────────────────────────────────────────────────────────────
@@ -415,6 +442,10 @@ export const faqs = [
   {
     q: 'Can consultations be claimed on health insurance?',
     a: 'Many private health insurance policies cover dietitian consultations. Jackie recommends checking with your provider before booking. She can provide receipts and clinical notes for insurance claims.',
+  },
+  {
+    q: 'Can you support me if I\'m taking a GLP-1 medication like Ozempic, Wegovy or Mounjaro?',
+    a: 'Yes — this is an area where specialist dietetic input makes a significant difference. GLP-1 medications reduce appetite substantially, which creates a real risk of inadequate protein intake and muscle loss if nutrition isn\'t managed carefully. Jackie provides evidence-based guidance on eating well within the constraints of reduced hunger, protecting lean muscle, managing common side effects through food choices, and — critically — building dietary habits that support your health in the long term, whether you remain on medication or not.',
   },
 ]
 
