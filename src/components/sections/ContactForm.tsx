@@ -172,8 +172,10 @@ export function ContactForm() {
             className="mt-1 flex-shrink-0"
           />
           <label htmlFor="privacy" className="text-xs leading-relaxed" style={{ color: 'var(--charcoal-mid)' }}>
-            I agree to my details being stored to respond to this enquiry. View the{' '}
-            <a href="/privacy" className="underline" style={{ color: 'var(--sage)' }}>privacy policy</a>.
+            I understand that in compliance with GDPR, my contact details will be held for no longer
+            than one year following our last correspondence or until I request deletion. They will not
+            be shared with third parties without my permission. View the{' '}
+            <a href="/disclosure" className="underline" style={{ color: 'var(--sage)' }}>Privacy Policy</a>.
           </label>
         </div>
 
