@@ -80,6 +80,8 @@
   html {
     @apply scroll-smooth;
     font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    /* offset for sticky header (top ribbon ~36px + main bar ~64px) */
+    scroll-padding-top: 100px;
   }
   body {
     @apply bg-background text-foreground;
@@ -90,6 +92,13 @@
   h1, h2, h3, h4 {
     font-family: 'Instrument Serif', Georgia, serif;
     letter-spacing: -0.01em;
+  }
+  /* Remove default outline on links/buttons; we add custom focus rings */
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--sage);
+    outline-offset: 3px;
+    border-radius: 4px;
   }
 }
 

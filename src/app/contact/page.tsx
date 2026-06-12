@@ -14,7 +14,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20" style={{ backgroundColor: 'var(--off-white)' }}>
+      <section className="pt-16 pb-16" style={{ backgroundColor: 'var(--off-white)' }}>
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Left: Info */}

@@ -43,7 +43,7 @@ export default async function ServicePage({ params }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20" style={{ backgroundColor: colours.bg }}>
+      <section className="pt-16 pb-16" style={{ backgroundColor: colours.bg }}>
         <div className="container-wide">
           <FadeIn>
             <Link

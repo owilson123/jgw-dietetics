@@ -67,7 +67,7 @@ export default function AboutPage() {
     <>
       {/* Hero */}
       <section
-        className="pt-32 pb-20"
+        className="pt-16 pb-16"
         style={{ backgroundColor: 'var(--off-white)' }}
       >
         <div className="container-wide">

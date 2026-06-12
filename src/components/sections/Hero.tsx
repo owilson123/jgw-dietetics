@@ -2,218 +2,249 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { CheckCircle2, ArrowRight } from 'lucide-react'
+import { ArrowRight, Phone } from 'lucide-react'
+
+const specialisms = [
+  { label: 'IBS & Digestive Health', icon: '🌿' },
+  { label: 'Low FODMAP Programme', icon: '🥗' },
+  { label: 'Type 1 & 2 Diabetes', icon: '💙' },
+  { label: 'Lifestyle Nutrition', icon: '✨' },
+  { label: 'Family Nutrition', icon: '🏡' },
+]
 
 const credentials = [
-  'HCPC Registered Dietitian',
-  '30+ Years NHS Experience',
-  'BDA Member',
+  { abbr: 'HCPC', full: 'Registered Dietitian' },
+  { abbr: 'BDA', full: 'British Dietetic Association' },
+  { abbr: 'NHS', full: 'Specialist Experience' },
 ]
 
 export function Hero() {
   return (
     <section
-      className="relative min-h-screen flex items-center overflow-hidden"
-      style={{ backgroundColor: 'var(--off-white)' }}
+      className="relative overflow-hidden"
+      style={{ backgroundColor: 'var(--off-white)', minHeight: 'calc(100vh - 96px)' }}
     >
-      {/* Background organic shape */}
+      {/* Subtle background texture */}
       <div
-        className="absolute top-0 right-0 w-1/2 h-full opacity-40 pointer-events-none"
+        className="absolute inset-0 pointer-events-none"
         style={{
-          background: `radial-gradient(ellipse at top right, var(--sage-pale) 0%, transparent 70%)`,
-        }}
-      />
-      <div
-        className="absolute bottom-0 left-0 w-96 h-96 opacity-30 pointer-events-none"
-        style={{
-          background: `radial-gradient(circle, var(--terracotta-pale) 0%, transparent 70%)`,
+          backgroundImage: `radial-gradient(circle at 20% 50%, var(--sage-pale) 0%, transparent 50%),
+                            radial-gradient(circle at 80% 20%, var(--terracotta-pale) 0%, transparent 40%)`,
+          opacity: 0.6,
         }}
       />
 
-      <div className="container-wide relative z-10 pt-24 pb-16 lg:pt-32 lg:pb-24">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="container-wide relative z-10 py-16 lg:py-24 xl:py-32">
+        <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
 
-          {/* Text */}
-          <div>
-            {/* Eyebrow */}
+          {/* ── Left: Main Content (3 cols) ── */}
+          <div className="lg:col-span-3">
+            {/* Eyebrow badge */}
             <motion.div
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-8"
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold tracking-widest uppercase mb-8"
               style={{
                 backgroundColor: 'var(--sage-pale)',
                 color: 'var(--sage)',
-                border: '1px solid rgba(74, 103, 65, 0.2)',
+                border: '1px solid rgba(74, 103, 65, 0.25)',
+                letterSpacing: '0.12em',
               }}
             >
-              <span className="w-2 h-2 rounded-full inline-block" style={{ backgroundColor: 'var(--sage)' }} />
-              Registered Dietitian · South West England
+              <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: 'var(--sage)' }} />
+              Specialist Registered Dietitian · South West England
             </motion.div>
 
-            {/* Headline */}
+            {/* Main headline */}
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-              className="text-5xl sm:text-6xl lg:text-7xl font-serif leading-[1.05] text-balance mb-6"
-              style={{ color: 'var(--charcoal)' }}
+              transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="font-serif leading-[1.04] text-balance mb-6"
+              style={{
+                color: 'var(--charcoal)',
+                fontSize: 'clamp(2.8rem, 5vw, 4.5rem)',
+              }}
             >
-              Evidence-Based Nutrition Support That Fits{' '}
-              <em className="not-italic" style={{ color: 'var(--sage)' }}>Real Life</em>
+              Evidence-Based{' '}
+              <span className="italic" style={{ color: 'var(--sage)' }}>Nutrition Support</span>
+              <br />That Fits Real Life
             </motion.h1>
 
-            {/* Subheading */}
+            {/* Subhead */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.6, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
               className="text-lg lg:text-xl leading-relaxed mb-10 max-w-xl"
               style={{ color: 'var(--charcoal-mid)' }}
             >
               Helping you improve digestive health, manage diabetes, and build a healthier
-              relationship with food through personalised dietetic support.
+              relationship with food — through truly personalised dietetic support.
             </motion.p>
 
             {/* CTAs */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4 mb-12"
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-3 mb-10"
             >
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-base font-semibold text-white transition-all duration-200 hover:opacity-90 hover:shadow-lg hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg text-sm font-semibold text-white transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
                 style={{ backgroundColor: 'var(--sage)' }}
               >
                 Book a Free Discovery Call
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-base font-semibold transition-all duration-200 hover:-translate-y-0.5"
+              <a
+                href="tel:07770769322"
+                className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-lg text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5"
                 style={{
-                  color: 'var(--sage)',
-                  border: '2px solid var(--sage)',
-                  backgroundColor: 'transparent',
+                  color: 'var(--charcoal)',
+                  border: '1.5px solid var(--sage-pale)',
+                  backgroundColor: 'white',
                 }}
               >
-                Explore Services
-              </Link>
+                <Phone className="w-4 h-4" style={{ color: 'var(--sage)' }} />
+                07770 769322
+              </a>
             </motion.div>
 
-            {/* Credentials */}
+            {/* Credential chips */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className="flex flex-wrap gap-4"
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="flex flex-wrap gap-3"
             >
               {credentials.map((c) => (
-                <div key={c} className="flex items-center gap-2 text-sm font-medium" style={{ color: 'var(--charcoal-mid)' }}>
-                  <CheckCircle2 className="w-4 h-4 flex-shrink-0" style={{ color: 'var(--sage)' }} />
-                  {c}
+                <div
+                  key={c.abbr}
+                  className="flex items-center gap-2.5 px-4 py-2 rounded-lg"
+                  style={{
+                    backgroundColor: 'white',
+                    border: '1px solid var(--sage-pale)',
+                  }}
+                >
+                  <span
+                    className="text-xs font-bold px-1.5 py-0.5 rounded"
+                    style={{ backgroundColor: 'var(--sage)', color: 'white' }}
+                  >
+                    {c.abbr}
+                  </span>
+                  <span className="text-xs font-medium" style={{ color: 'var(--charcoal-mid)' }}>{c.full}</span>
                 </div>
               ))}
+              <div
+                className="flex items-center gap-2 px-4 py-2 rounded-lg"
+                style={{
+                  backgroundColor: 'white',
+                  border: '1px solid var(--sage-pale)',
+                }}
+              >
+                <span className="text-xs font-bold" style={{ color: 'var(--terracotta)' }}>30+</span>
+                <span className="text-xs font-medium" style={{ color: 'var(--charcoal-mid)' }}>Years Experience</span>
+              </div>
             </motion.div>
           </div>
 
-          {/* Portrait / Visual */}
+          {/* ── Right: Specialisms Panel (2 cols) ── */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="relative"
+            initial={{ opacity: 0, x: 24 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:col-span-2"
           >
-            {/* Portrait placeholder with elegant styling */}
-            <div className="relative mx-auto max-w-md lg:max-w-none">
-              {/* Main portrait frame */}
+            <div className="rounded-2xl overflow-hidden shadow-xl" style={{ border: '1px solid var(--sage-pale)' }}>
+              {/* Panel header */}
               <div
-                className="relative rounded-3xl overflow-hidden aspect-[3/4] lg:aspect-[4/5]"
-                style={{ backgroundColor: 'var(--sage-pale)' }}
+                className="px-7 py-6"
+                style={{ backgroundColor: 'var(--sage)' }}
               >
-                {/* Placeholder visual until portrait is added */}
-                <div
-                  className="w-full h-full flex flex-col items-center justify-end p-8"
-                  style={{
-                    background: `linear-gradient(160deg, var(--sage-pale) 0%, var(--eucalyptus) 100%)`,
-                  }}
-                >
-                  {/* Silhouette representation */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-20">
-                    <svg viewBox="0 0 200 280" className="w-48 h-auto" fill="white">
-                      <circle cx="100" cy="70" r="40" />
-                      <ellipse cx="100" cy="200" rx="65" ry="80" />
-                    </svg>
-                  </div>
-                  <div
-                    className="relative z-10 text-center text-white"
-                  >
-                    <p className="text-sm font-medium opacity-80">Jackie Wilson</p>
-                    <p className="text-xs opacity-60">Registered Dietitian</p>
-                  </div>
-                </div>
-
-                {/* Floating credential card */}
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.8 }}
-                  className="absolute bottom-8 -left-6 bg-white rounded-2xl p-4 shadow-xl max-w-[160px]"
-                >
-                  <p className="text-2xl font-serif font-bold" style={{ color: 'var(--sage)' }}>30+</p>
-                  <p className="text-xs text-gray-500 leading-tight">Years of clinical experience</p>
-                </motion.div>
-
-                {/* Floating reviews card */}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 1.0 }}
-                  className="absolute top-8 -right-6 bg-white rounded-2xl p-4 shadow-xl max-w-[160px]"
-                >
-                  <div className="flex mb-1">
-                    {[1,2,3,4,5].map(i => (
-                      <svg key={i} className="w-3 h-3" fill="var(--gold)" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <p className="text-xs text-gray-500 leading-tight">Trusted by hundreds of clients</p>
-                </motion.div>
+                <p className="text-xs font-semibold tracking-widest uppercase opacity-70 text-white mb-1">
+                  Areas of Expertise
+                </p>
+                <p className="text-white font-serif text-xl">
+                  Specialist support across six key areas
+                </p>
               </div>
 
-              {/* Decorative element */}
-              <div
-                className="absolute -bottom-4 -right-4 w-32 h-32 rounded-full opacity-20 -z-10"
-                style={{ backgroundColor: 'var(--terracotta)' }}
-              />
-              <div
-                className="absolute -top-4 -left-4 w-24 h-24 rounded-full opacity-15 -z-10"
-                style={{ backgroundColor: 'var(--gold)' }}
-              />
+              {/* Specialism list */}
+              <div className="bg-white">
+                {specialisms.map((s, i) => (
+                  <motion.div
+                    key={s.label}
+                    initial={{ opacity: 0, x: 16 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: 0.5 + i * 0.08 }}
+                    className="flex items-center gap-4 px-7 py-4 transition-colors hover:bg-stone-50"
+                    style={{
+                      borderBottom: i < specialisms.length - 1 ? '1px solid var(--sage-pale)' : 'none',
+                    }}
+                  >
+                    <span className="text-xl flex-shrink-0 w-7">{s.icon}</span>
+                    <span className="text-sm font-medium" style={{ color: 'var(--charcoal)' }}>{s.label}</span>
+                    <ArrowRight className="w-3.5 h-3.5 ml-auto flex-shrink-0 opacity-30" />
+                  </motion.div>
+                ))}
+
+                {/* Bottom CTA */}
+                <div className="px-7 py-5" style={{ backgroundColor: 'var(--off-white)' }}>
+                  <p className="text-xs mb-3" style={{ color: 'var(--charcoal-mid)' }}>
+                    Not sure where to start?
+                  </p>
+                  <Link
+                    href="/contact"
+                    className="block text-center py-3 rounded-lg text-xs font-semibold text-white transition-all hover:opacity-90"
+                    style={{ backgroundColor: 'var(--sage)' }}
+                  >
+                    Book a Free 15-Minute Discovery Call →
+                  </Link>
+                </div>
+              </div>
             </div>
+
+            {/* Below panel — social proof */}
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.9 }}
+              className="mt-4 flex gap-3"
+            >
+              <div
+                className="flex-1 rounded-xl px-5 py-4 text-center"
+                style={{ backgroundColor: 'white', border: '1px solid var(--sage-pale)' }}
+              >
+                <p className="text-2xl font-serif font-bold mb-0.5" style={{ color: 'var(--sage)' }}>30+</p>
+                <p className="text-xs" style={{ color: 'var(--charcoal-mid)' }}>Years experience</p>
+              </div>
+              <div
+                className="flex-1 rounded-xl px-5 py-4 text-center"
+                style={{ backgroundColor: 'white', border: '1px solid var(--sage-pale)' }}
+              >
+                <div className="flex justify-center mb-1">
+                  {[1,2,3,4,5].map(i => (
+                    <svg key={i} className="w-3.5 h-3.5" fill="var(--gold)" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-xs" style={{ color: 'var(--charcoal-mid)' }}>5-star rated</p>
+              </div>
+              <div
+                className="flex-1 rounded-xl px-5 py-4 text-center"
+                style={{ backgroundColor: 'white', border: '1px solid var(--sage-pale)' }}
+              >
+                <p className="text-2xl font-serif font-bold mb-0.5" style={{ color: 'var(--terracotta)' }}>NHS</p>
+                <p className="text-xs" style={{ color: 'var(--charcoal-mid)' }}>Specialist level</p>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2, duration: 0.5 }}
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-          className="w-5 h-8 rounded-full border-2 flex items-start justify-center pt-1.5"
-          style={{ borderColor: 'rgba(74, 103, 65, 0.4)' }}
-        >
-          <div className="w-1 h-2 rounded-full" style={{ backgroundColor: 'var(--sage)' }} />
-        </motion.div>
-      </motion.div>
     </section>
   )
 }

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="pt-32 pb-20">
+    <div className="pt-16 pb-16">
       <div className="container-narrow">
         <h1 className="text-5xl font-serif mb-8" style={{ color: 'var(--charcoal)' }}>Privacy Policy</h1>
         <div className="prose prose-lg max-w-none space-y-6 text-base leading-relaxed" style={{ color: 'var(--charcoal-mid)' }}>

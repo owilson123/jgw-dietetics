@@ -23,7 +23,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20" style={{ backgroundColor: 'var(--off-white)' }}>
+      <section className="pt-16 pb-16" style={{ backgroundColor: 'var(--off-white)' }}>
         <div className="container-narrow text-center">
           <FadeIn>
             <p className="text-sm font-semibold tracking-widest uppercase mb-6" style={{ color: 'var(--sage)' }}>
