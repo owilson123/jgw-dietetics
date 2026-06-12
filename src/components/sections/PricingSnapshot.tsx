@@ -5,7 +5,7 @@ import { Check, ArrowRight } from 'lucide-react'
 import { FadeIn } from '@/components/ui/FadeIn'
 import { programmes } from '@/lib/data'
 
-const snapshot = programmes.filter((p) => ['discovery', 'ibs-programme', 'initial'].includes(p.id))
+const snapshot = programmes.filter((p) => ['discovery', 'basic-nutrition', 'ibs-programme'].includes(p.id))
 
 export function PricingSnapshot() {
   return (
