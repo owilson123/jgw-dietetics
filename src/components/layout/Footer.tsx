@@ -14,7 +14,6 @@ const footerLinks = {
     { href: '/about', label: 'About Jackie' },
     { href: '/programmes', label: 'Programmes & Pricing' },
     { href: '/success-stories', label: 'Success Stories' },
-    { href: '/resources', label: 'Resources' },
     { href: '/contact', label: 'Contact' },
   ],
 }

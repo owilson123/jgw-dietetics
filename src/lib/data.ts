@@ -299,7 +299,7 @@ export const programmes = [
     price: '£175',
     duration: '2 appointments',
     description:
-      'Two appointments covering a full nutritional assessment and a follow-up review — with bespoke recommendations, meal planning support, and resources.',
+      'Two appointments covering a full nutritional assessment and a follow-up review — with bespoke recommendations and personalised meal planning guidance.',
     includes: [
       'Initial 60-minute consultation',
       'One 30-minute review consultation',
@@ -307,7 +307,7 @@ export const programmes = [
       'Food diary review',
       'Comprehensive assessment and bespoke recommendations',
       'Meal planning, meal ideas and recipes',
-      'Advice on portions and useful resources',
+      'Advice on portions and food label reading',
       'Free email support between consultations',
     ],
     cta: 'Book Now',
@@ -341,7 +341,7 @@ export const programmes = [
     price: '£450',
     duration: '6 appointments · 6–12 weeks',
     description:
-      'An intensive coaching programme with an initial appointment and five review sessions every 1–2 weeks, supporting you with personalised goals, blood result interpretation, and ongoing resources.',
+      'An intensive coaching programme with an initial appointment and five review sessions every 1–2 weeks, supporting you with personalised goals, blood result interpretation, and ongoing dietetic guidance.',
     includes: [
       'Initial 60-minute appointment',
       'Five 30-minute review consultations (every 1–2 weeks)',
