@@ -108,36 +108,40 @@ export default function AboutPage() {
             </FadeIn>
 
             <FadeIn delay={0.2} direction="left">
-              <div className="relative">
-                <div
-                  className="rounded-2xl overflow-hidden shadow-xl"
-                  style={{ border: '4px solid white', outline: '1px solid var(--sage-pale)' }}
-                >
-                  <Image
-                    src="/images/jackie-wilson.jpg"
-                    alt="Jackie Wilson — Specialist Registered Dietitian"
-                    width={225}
-                    height={300}
-                    className="w-full object-cover object-top"
-                    style={{ maxHeight: '520px' }}
-                    priority
-                  />
-                  {/* Name overlay at bottom */}
+              <div className="flex justify-center lg:justify-start">
+                <div className="relative w-full max-w-[300px]">
                   <div
-                    className="px-6 py-5"
-                    style={{ backgroundColor: 'var(--sage)' }}
+                    className="rounded-2xl overflow-hidden shadow-xl"
+                    style={{ border: '1px solid var(--sage-pale)' }}
                   >
-                    <p className="text-white font-serif text-xl">Jackie Wilson RD</p>
-                    <p className="text-white/70 text-xs tracking-wider uppercase mt-0.5">
-                      Specialist Registered Dietitian · 30+ Years
-                    </p>
+                    {/* Photo centred on a sage-pale bg so it never needs to stretch */}
+                    <div
+                      className="flex items-end justify-center pt-10 px-10"
+                      style={{ backgroundColor: 'var(--sage-pale)' }}
+                    >
+                      <Image
+                        src="/images/jackie-wilson.jpg"
+                        alt="Jackie Wilson — Specialist Registered Dietitian"
+                        width={225}
+                        height={300}
+                        className="rounded-t-xl shadow-md"
+                        style={{ width: '200px', height: 'auto' }}
+                        priority
+                      />
+                    </div>
+                    <div className="px-6 py-5" style={{ backgroundColor: 'var(--sage)' }}>
+                      <p className="text-white font-serif text-xl">Jackie Wilson RD</p>
+                      <p className="text-white/70 text-xs tracking-wider uppercase mt-0.5">
+                        Specialist Registered Dietitian · 30+ Years
+                      </p>
+                    </div>
                   </div>
+                  {/* Decorative offset shadow */}
+                  <div
+                    className="absolute -bottom-2.5 -right-2.5 w-full h-full rounded-2xl -z-10"
+                    style={{ backgroundColor: 'var(--sage-pale)' }}
+                  />
                 </div>
-                {/* Decorative accent */}
-                <div
-                  className="absolute -bottom-3 -right-3 w-full h-full rounded-2xl -z-10"
-                  style={{ backgroundColor: 'var(--sage-pale)', border: '1px solid var(--sage-pale)' }}
-                />
               </div>
             </FadeIn>
           </div>
