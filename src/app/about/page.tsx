@@ -8,7 +8,7 @@ import { FinalCTA } from '@/components/sections/FinalCTA'
 export const metadata: Metadata = {
   title: 'About Jackie Wilson',
   description:
-    'Meet Jackie Wilson — Registered Dietitian with 30+ years of NHS and private experience, specialising in IBS, gut health, diabetes, and practical nutrition support in the South West.',
+    'Meet Jackie Wilson — Registered Dietitian with 30+ years of NHS and private experience, specialising in IBS, gut health, diabetes, and specialist dietetic care in the South West.',
 }
 
 const timeline = [

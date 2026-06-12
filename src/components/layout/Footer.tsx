@@ -36,7 +36,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm leading-relaxed mb-6" style={{ color: 'var(--stone)' }}>
-              Evidence-based nutrition support for IBS, gut health, diabetes, and lifestyle change.
+              Evidence-based dietetic support for IBS, gut health, diabetes, and lifestyle change.
               30+ years NHS and private practice experience.
             </p>
             <div className="flex items-center gap-4">

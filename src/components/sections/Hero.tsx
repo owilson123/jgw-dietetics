@@ -65,7 +65,7 @@ export function Hero() {
               style={{ color: 'var(--charcoal)', fontSize: 'clamp(2.6rem, 4.5vw, 4.2rem)' }}
             >
               Evidence-Based{' '}
-              <span className="italic" style={{ color: 'var(--sage)' }}>Nutrition Support</span>
+              <span className="italic" style={{ color: 'var(--sage)' }}>Dietetic Care</span>
               <br className="hidden sm:block" />
               {' '}That Fits Real Life
             </motion.h1>

@@ -8,7 +8,7 @@ import { testimonials } from '@/lib/data'
 export const metadata: Metadata = {
   title: 'Success Stories',
   description:
-    'Read what clients say about their experience with Jackie Wilson RD — real results for IBS, gut health, diabetes management, and nutrition support.',
+    'Read what clients say about their experience with Jackie Wilson RD — real results for IBS, gut health, diabetes management, and dietetic support.',
 }
 
 export default function SuccessStoriesPage() {

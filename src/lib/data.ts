@@ -86,7 +86,7 @@ export const services = [
     icon: 'TrendingUp',
     tagline: 'Real change is possible with the right support.',
     description:
-      'A Type 2 or prediabetes diagnosis can feel overwhelming — but with the right nutritional guidance, many people achieve remarkable improvements in their blood glucose, energy, and overall health.',
+      'A Type 2 or prediabetes diagnosis can feel overwhelming — but with the right dietetic guidance, many people achieve remarkable improvements in their blood glucose, energy, and overall health.',
     symptoms: [
       'Newly diagnosed and unsure where to start',
       'Struggling to make sustainable changes',
@@ -147,7 +147,7 @@ export const services = [
       'Feeding teenagers healthily',
     ],
     howHelps:
-      'Jackie provides tailored family nutrition support — from meal planning and batch cooking strategies to understanding portion sizes, managing fussy eating, and ensuring everyone in the household gets what they need.',
+      'Jackie provides tailored dietetic support for the whole family — from meal planning and batch cooking strategies to understanding portion sizes, managing fussy eating, and ensuring everyone in the household gets what they need.',
     outcomes: [
       'Practical, achievable meal plans',
       'Reduced mealtime stress',
@@ -173,7 +173,7 @@ export const services = [
       'Planning to transition off medication and maintain progress',
     ],
     howHelps:
-      'With over 30 years of NHS experience — including extensive work in diabetes and weight management — Jackie provides evidence-based nutritional guidance tailored to people on GLP-1 therapies. She focuses on adequate protein intake, preserving lean muscle, managing the practical challenges of reduced appetite, and building a sustainable dietary pattern that supports your health well beyond the course of treatment. This is clinical nutrition support delivered with the same rigour and compassion she brings to every client.',
+      'With over 30 years of NHS experience — including extensive work in diabetes and weight management — Jackie provides evidence-based dietetic guidance tailored to people on GLP-1 therapies. She focuses on adequate protein intake, preserving lean muscle, managing the practical challenges of reduced appetite, and building a sustainable dietary pattern that supports your health well beyond the course of treatment. This is clinical dietetic care delivered with the same rigour and compassion she brings to every client.',
     outcomes: [
       'Nutritional adequacy maintained on a reduced appetite',
       'Muscle mass preserved through targeted protein guidance',
@@ -337,7 +337,7 @@ export const programmes = [
   {
     id: 'lifestyle',
     name: 'Intensive 6–12 Week Lifestyle Nutrition Coaching',
-    tagline: 'Comprehensive lifestyle nutrition support',
+    tagline: 'Comprehensive lifestyle dietetic support',
     price: '£450',
     duration: '6 appointments · 6–12 weeks',
     description:

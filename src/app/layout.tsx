@@ -7,7 +7,7 @@ import { LocalBusinessSchema } from '@/components/StructuredData'
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.jgw-dietetics.co.uk'),
   title: {
-    default: 'JGW Dietetics | Registered Dietitian | IBS, Diabetes & Nutrition Support',
+    default: 'JGW Dietetics | Registered Dietitian | IBS, Diabetes & Dietetic Care',
     template: '%s | JGW Dietetics',
   },
   description:
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: 'JGW Dietetics',
     title: 'JGW Dietetics | Expert Dietitian | IBS, Diabetes & Nutrition',
     description:
-      'Evidence-based nutrition support for IBS, gut health, diabetes, and lifestyle change. 30+ years NHS experience. South West UK.',
+      'Evidence-based dietetic support for IBS, gut health, diabetes, and lifestyle change. 30+ years NHS experience. South West UK.',
     images: [
       {
         url: '/og-image.jpg',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'JGW Dietetics | Registered Dietitian',
-    description: 'Evidence-based nutrition support for IBS, gut health and diabetes.',
+    description: 'Evidence-based dietetic support for IBS, gut health and diabetes.',
     images: ['/og-image.jpg'],
   },
   robots: {

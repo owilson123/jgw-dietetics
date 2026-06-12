@@ -4,7 +4,7 @@ export function LocalBusinessSchema() {
     '@type': 'MedicalBusiness',
     name: 'JGW Dietetics',
     description:
-      'Specialist Registered Dietitian Jackie Wilson — IBS, gut health, diabetes, and lifestyle nutrition support. 30+ years NHS experience.',
+      'Specialist Registered Dietitian Jackie Wilson — IBS, gut health, diabetes, and lifestyle dietetic support. 30+ years NHS experience.',
     url: 'https://www.jgw-dietetics.co.uk',
     telephone: '07770769322',
     email: 'info@jgw-dietetics.co.uk',
