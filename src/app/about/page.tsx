@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import { FadeIn } from '@/components/ui/FadeIn'
 import { FinalCTA } from '@/components/sections/FinalCTA'
@@ -107,20 +108,36 @@ export default function AboutPage() {
             </FadeIn>
 
             <FadeIn delay={0.2} direction="left">
-              <div
-                className="rounded-3xl overflow-hidden aspect-square relative"
-                style={{ backgroundColor: 'var(--sage-pale)' }}
-              >
+              <div className="relative">
                 <div
-                  className="w-full h-full flex items-center justify-center"
-                  style={{ background: `linear-gradient(135deg, var(--sage-pale) 0%, var(--eucalyptus) 100%)` }}
+                  className="rounded-2xl overflow-hidden shadow-xl"
+                  style={{ border: '4px solid white', outline: '1px solid var(--sage-pale)' }}
                 >
-                  <div className="text-center text-white p-12 opacity-80">
-                    <div className="text-6xl font-serif font-bold mb-2">JW</div>
-                    <p className="text-sm tracking-widest uppercase opacity-70">Jackie Wilson RD</p>
-                    <p className="text-xs opacity-50 mt-1">Portrait coming soon</p>
+                  <Image
+                    src="/images/jackie-wilson.jpg"
+                    alt="Jackie Wilson — Specialist Registered Dietitian"
+                    width={225}
+                    height={300}
+                    className="w-full object-cover object-top"
+                    style={{ maxHeight: '520px' }}
+                    priority
+                  />
+                  {/* Name overlay at bottom */}
+                  <div
+                    className="px-6 py-5"
+                    style={{ backgroundColor: 'var(--sage)' }}
+                  >
+                    <p className="text-white font-serif text-xl">Jackie Wilson RD</p>
+                    <p className="text-white/70 text-xs tracking-wider uppercase mt-0.5">
+                      Specialist Registered Dietitian · 30+ Years
+                    </p>
                   </div>
                 </div>
+                {/* Decorative accent */}
+                <div
+                  className="absolute -bottom-3 -right-3 w-full h-full rounded-2xl -z-10"
+                  style={{ backgroundColor: 'var(--sage-pale)', border: '1px solid var(--sage-pale)' }}
+                />
               </div>
             </FadeIn>
           </div>
