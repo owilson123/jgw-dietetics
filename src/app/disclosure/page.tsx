@@ -14,7 +14,7 @@ export default function DisclosurePage() {
           <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'var(--sage)' }}>
             Legal & Professional Standards
           </p>
-          <h1 className="text-5xl font-serif mb-4" style={{ color: 'var(--charcoal)' }}>
+          <h1 className="text-4xl sm:text-5xl font-serif mb-4" style={{ color: 'var(--charcoal)' }}>
             Disclosure & Privacy Policy
           </h1>
           <p className="text-base" style={{ color: 'var(--charcoal-mid)' }}>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { MobileCTABar } from '@/components/layout/MobileCTABar'
 import { LocalBusinessSchema } from '@/components/StructuredData'
 
 export const metadata: Metadata = {
@@ -74,8 +75,9 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col">
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 pb-16 lg:pb-0">{children}</main>
         <Footer />
+        <MobileCTABar />
       </body>
     </html>
   )

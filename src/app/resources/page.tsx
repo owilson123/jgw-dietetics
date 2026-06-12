@@ -69,13 +69,13 @@ export default function ResourcesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-16 pb-16" style={{ backgroundColor: 'var(--off-white)' }}>
+      <section className="pt-10 pb-10 md:pt-16 md:pb-16" style={{ backgroundColor: 'var(--off-white)' }}>
         <div className="container-narrow text-center">
           <FadeIn>
             <p className="text-sm font-semibold tracking-widest uppercase mb-6" style={{ color: 'var(--sage)' }}>
               Free Resources
             </p>
-            <h1 className="text-5xl sm:text-6xl font-serif mb-6 text-balance" style={{ color: 'var(--charcoal)' }}>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif mb-6 text-balance" style={{ color: 'var(--charcoal)' }}>
               Evidence-Based Nutrition Knowledge
             </h1>
             <p className="text-xl leading-relaxed" style={{ color: 'var(--charcoal-mid)' }}>

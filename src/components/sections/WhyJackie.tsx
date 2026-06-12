@@ -39,14 +39,14 @@ export function WhyJackie() {
 
           {/* Left: Visual */}
           <FadeIn direction="right">
-            <div className="relative">
+            <div className="relative lg:pb-10">
               {/* Quote card */}
               <div
-                className="rounded-3xl p-10 lg:p-12"
+                className="rounded-3xl p-8 lg:p-12"
                 style={{ backgroundColor: 'var(--sage)', color: 'white' }}
               >
-                <div className="text-5xl font-serif leading-none mb-6 opacity-40">"</div>
-                <blockquote className="text-xl lg:text-2xl font-serif leading-relaxed italic mb-8">
+                <div className="text-4xl font-serif leading-none mb-5 opacity-40">"</div>
+                <blockquote className="text-base sm:text-xl lg:text-2xl font-serif leading-relaxed italic mb-8">
                   I still get the same satisfaction I had on day one when a client tells me they feel better,
                   that they understand their body, that they can finally eat without fear.
                 </blockquote>
@@ -64,9 +64,9 @@ export function WhyJackie() {
                 </div>
               </div>
 
-              {/* Floating stat */}
+              {/* Stat — floats on desktop, flows below on mobile */}
               <div
-                className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-5 shadow-xl"
+                className="mt-4 lg:mt-0 lg:absolute lg:-bottom-6 lg:-right-6 bg-white rounded-2xl p-5 shadow-xl self-start"
               >
                 <div className="flex items-end gap-1 mb-1">
                   <span className="text-3xl font-serif font-bold" style={{ color: 'var(--terracotta)' }}>100%</span>

@@ -24,7 +24,7 @@ export function Hero() {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ backgroundColor: 'var(--off-white)', minHeight: 'calc(100vh - 100px)' }}
+      style={{ backgroundColor: 'var(--off-white)' }}
     >
       {/* Background gradients */}
       <div
@@ -36,120 +36,159 @@ export function Hero() {
         }}
       />
 
-      <div className="container-wide relative z-10 py-16 lg:py-20 xl:py-28">
-        <div className="grid lg:grid-cols-5 gap-12 lg:gap-10 items-center">
+      <div className="container-wide relative z-10 py-10 sm:py-14 lg:py-20 xl:py-28">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-10 items-center">
 
-          {/* ── Left: Main Content (3 cols) ── */}
+          {/* ── Main Content ── */}
           <div className="lg:col-span-3">
+
+            {/* Mobile-only: compact photo + name strip */}
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="flex items-center gap-4 mb-6 lg:hidden"
+            >
+              <div
+                className="w-14 h-14 rounded-full overflow-hidden flex-shrink-0 flex items-end justify-center"
+                style={{ backgroundColor: 'var(--sage-pale)' }}
+              >
+                <Image
+                  src="/images/jackie-wilson.jpg"
+                  alt="Jackie Wilson RD"
+                  width={56}
+                  height={75}
+                  className="object-cover object-top w-full"
+                  priority
+                />
+              </div>
+              <div>
+                <p className="text-sm font-semibold" style={{ color: 'var(--charcoal)' }}>Jackie Wilson RD</p>
+                <p className="text-xs" style={{ color: 'var(--charcoal-mid)' }}>Specialist Registered Dietitian · 30+ Years</p>
+              </div>
+            </motion.div>
+
+            {/* Eyebrow */}
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold mb-8"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-5 sm:mb-8"
               style={{
                 backgroundColor: 'var(--sage-pale)',
                 color: 'var(--sage)',
-                border: '1px solid rgba(74, 103, 65, 0.25)',
-                letterSpacing: '0.1em',
+                border: '1px solid rgba(58, 95, 74, 0.25)',
+                letterSpacing: '0.08em',
               }}
             >
               <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: 'var(--sage)' }} />
-              SPECIALIST REGISTERED DIETITIAN · SOUTH WEST ENGLAND
+              <span className="hidden sm:inline">SPECIALIST REGISTERED DIETITIAN · SOUTH WEST ENGLAND</span>
+              <span className="sm:hidden">REGISTERED DIETITIAN · SOUTH WEST</span>
             </motion.div>
 
+            {/* Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="font-serif leading-[1.04] text-balance mb-6"
-              style={{ color: 'var(--charcoal)', fontSize: 'clamp(2.6rem, 4.5vw, 4.2rem)' }}
+              className="font-serif leading-[1.06] text-balance mb-5 sm:mb-6"
+              style={{
+                color: 'var(--charcoal)',
+                fontSize: 'clamp(2rem, 6vw, 4.2rem)',
+              }}
             >
               Evidence-Based{' '}
               <span className="italic" style={{ color: 'var(--sage)' }}>Dietetic Care</span>
-              <br className="hidden sm:block" />
               {' '}That Fits Real Life
             </motion.h1>
 
+            {/* Subhead */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-              className="text-lg leading-relaxed mb-10 max-w-lg"
+              className="text-base sm:text-lg leading-relaxed mb-8 max-w-lg"
               style={{ color: 'var(--charcoal-mid)' }}
             >
               Helping you improve digestive health, manage diabetes, and build a healthier
               relationship with food through truly personalised dietetic support.
             </motion.p>
 
+            {/* CTAs */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-3 mb-10"
+              className="flex flex-col sm:flex-row gap-3 mb-8"
             >
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-lg text-sm font-semibold text-white transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
-                style={{ backgroundColor: 'var(--sage)' }}
+                className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-lg text-sm font-semibold text-white transition-all duration-200 hover:shadow-lg active:scale-[0.98]"
+                style={{ backgroundColor: 'var(--sage)', minHeight: '52px' }}
               >
                 Book a Free Discovery Call
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 flex-shrink-0" />
               </Link>
               <a
                 href="tel:07770769322"
-                className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-lg text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5"
-                style={{ color: 'var(--charcoal)', border: '1.5px solid rgba(74,103,65,0.3)', backgroundColor: 'white' }}
+                className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-lg text-sm font-semibold transition-all duration-200 active:scale-[0.98]"
+                style={{
+                  color: 'var(--charcoal)',
+                  border: '1.5px solid rgba(58, 95, 74, 0.3)',
+                  backgroundColor: 'white',
+                  minHeight: '52px',
+                }}
               >
-                <Phone className="w-4 h-4" style={{ color: 'var(--sage)' }} />
+                <Phone className="w-4 h-4 flex-shrink-0" style={{ color: 'var(--sage)' }} />
                 07770 769322
               </a>
             </motion.div>
 
+            {/* Credential chips */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="flex flex-wrap gap-2.5"
+              className="flex flex-wrap gap-2"
             >
               {credentials.map((c) => (
                 <div
                   key={c.abbr}
-                  className="flex items-center gap-2 px-3.5 py-2 rounded-lg"
+                  className="flex items-center gap-2 px-3 py-1.5 rounded-md text-xs"
                   style={{ backgroundColor: 'white', border: '1px solid var(--sage-pale)' }}
                 >
                   <span
-                    className="text-[10px] font-bold px-1.5 py-0.5 rounded"
+                    className="font-bold px-1.5 py-0.5 rounded text-[10px]"
                     style={{ backgroundColor: 'var(--sage)', color: 'white' }}
                   >
                     {c.abbr}
                   </span>
-                  <span className="text-xs font-medium" style={{ color: 'var(--charcoal-mid)' }}>{c.full}</span>
+                  <span className="font-medium" style={{ color: 'var(--charcoal-mid)' }}>{c.full}</span>
                 </div>
               ))}
               <div
-                className="flex items-center gap-2 px-3.5 py-2 rounded-lg"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-md text-xs"
                 style={{ backgroundColor: 'white', border: '1px solid var(--sage-pale)' }}
               >
-                <span className="text-xs font-bold" style={{ color: 'var(--terracotta)' }}>30+</span>
-                <span className="text-xs font-medium" style={{ color: 'var(--charcoal-mid)' }}>Years Experience</span>
+                <span className="font-bold" style={{ color: 'var(--terracotta)' }}>30+</span>
+                <span className="font-medium" style={{ color: 'var(--charcoal-mid)' }}>Years Experience</span>
               </div>
             </motion.div>
           </div>
 
-          {/* ── Right: Profile card (2 cols) ── */}
+          {/* ── Profile Card — desktop only ── */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="lg:col-span-2 flex justify-center lg:justify-end"
+            className="hidden lg:flex lg:col-span-2 justify-end"
           >
-            <div className="w-full max-w-[320px]">
-              {/* Card */}
+            <div className="w-full max-w-[300px]">
               <div
                 className="rounded-2xl overflow-hidden shadow-xl"
                 style={{ border: '1px solid var(--sage-pale)', backgroundColor: 'white' }}
               >
-                {/* Photo — constrained to native size, centred on sage bg */}
+                {/* Photo */}
                 <div
                   className="flex items-end justify-center pt-8 px-8"
                   style={{ backgroundColor: 'var(--sage-pale)' }}
@@ -185,8 +224,6 @@ export function Hero() {
                       <span style={{ color: 'var(--charcoal-mid)' }}>{s}</span>
                     </div>
                   ))}
-
-                  {/* CTA at bottom of card */}
                   <div className="p-4" style={{ backgroundColor: 'var(--off-white)' }}>
                     <Link
                       href="/contact"
@@ -199,13 +236,8 @@ export function Hero() {
                 </div>
               </div>
 
-              {/* Stat strip below card */}
-              <motion.div
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
-                className="grid grid-cols-3 gap-2 mt-3"
-              >
+              {/* Stat strip */}
+              <div className="grid grid-cols-3 gap-2 mt-3">
                 {[
                   { val: '30+', label: 'Years exp.', color: 'var(--sage)' },
                   { val: '★★★★★', label: '5-star rated', color: 'var(--gold)', small: true },
@@ -225,7 +257,7 @@ export function Hero() {
                     <p className="text-[10px]" style={{ color: 'var(--charcoal-mid)' }}>{s.label}</p>
                   </div>
                 ))}
-              </motion.div>
+              </div>
             </div>
           </motion.div>
         </div>

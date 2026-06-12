@@ -110,7 +110,7 @@
     text-wrap: balance;
   }
   .section-padding {
-    @apply py-20 md:py-28 lg:py-32;
+    @apply py-14 md:py-24 lg:py-32;
   }
   .container-narrow {
     @apply mx-auto max-w-3xl px-4 sm:px-6;

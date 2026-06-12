@@ -7,9 +7,9 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="pt-16 pb-16">
+    <div className="pt-10 pb-10 md:pt-16 md:pb-16">
       <div className="container-narrow">
-        <h1 className="text-5xl font-serif mb-8" style={{ color: 'var(--charcoal)' }}>Privacy Policy</h1>
+        <h1 className="text-4xl sm:text-5xl font-serif mb-8" style={{ color: 'var(--charcoal)' }}>Privacy Policy</h1>
         <div className="prose prose-lg max-w-none space-y-6 text-base leading-relaxed" style={{ color: 'var(--charcoal-mid)' }}>
           <p>
             JGW Dietetics is committed to protecting and respecting your privacy. This policy sets out how we

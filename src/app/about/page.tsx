@@ -68,7 +68,7 @@ export default function AboutPage() {
     <>
       {/* Hero */}
       <section
-        className="pt-16 pb-16"
+        className="pt-10 pb-10 md:pt-16 md:pb-16"
         style={{ backgroundColor: 'var(--off-white)' }}
       >
         <div className="container-wide">
@@ -77,7 +77,7 @@ export default function AboutPage() {
               <p className="text-sm font-semibold tracking-widest uppercase mb-6" style={{ color: 'var(--sage)' }}>
                 About Jackie
               </p>
-              <h1 className="text-5xl sm:text-6xl font-serif mb-6 text-balance" style={{ color: 'var(--charcoal)' }}>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif mb-6 text-balance" style={{ color: 'var(--charcoal)' }}>
                 Three Decades of Helping People Feel Better
               </h1>
               <p className="text-xl leading-relaxed mb-8" style={{ color: 'var(--charcoal-mid)' }}>

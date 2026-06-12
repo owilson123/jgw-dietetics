@@ -44,7 +44,7 @@ export default async function ServicePage({ params }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="pt-16 pb-16" style={{ backgroundColor: colours.bg }}>
+      <section className="pt-10 pb-10 md:pt-16 md:pb-16" style={{ backgroundColor: colours.bg }}>
         <div className="container-wide">
           <FadeIn>
             <Link
@@ -61,7 +61,7 @@ export default async function ServicePage({ params }: Props) {
               <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6" style={{ backgroundColor: colours.light }}>
                 <ServiceIcon name={service.icon} className="w-7 h-7" style={{ color: colours.accent }} />
               </div>
-              <h1 className="text-5xl sm:text-6xl font-serif mb-5 text-balance" style={{ color: 'var(--charcoal)' }}>
+              <h1 className="text-4xl sm:text-5xl font-serif mb-5 text-balance" style={{ color: 'var(--charcoal)' }}>
                 {service.title}
               </h1>
               <p className="text-xl font-medium mb-6" style={{ color: colours.accent }}>

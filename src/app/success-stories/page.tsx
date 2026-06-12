@@ -15,13 +15,13 @@ export default function SuccessStoriesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-16 pb-16" style={{ backgroundColor: 'var(--off-white)' }}>
+      <section className="pt-10 pb-10 md:pt-16 md:pb-16" style={{ backgroundColor: 'var(--off-white)' }}>
         <div className="container-narrow text-center">
           <FadeIn>
             <p className="text-sm font-semibold tracking-widest uppercase mb-6" style={{ color: 'var(--sage)' }}>
               Client Testimonials
             </p>
-            <h1 className="text-5xl sm:text-6xl font-serif mb-6 text-balance" style={{ color: 'var(--charcoal)' }}>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif mb-6 text-balance" style={{ color: 'var(--charcoal)' }}>
               Real Results for Real People
             </h1>
             <p className="text-xl leading-relaxed" style={{ color: 'var(--charcoal-mid)' }}>
@@ -35,7 +35,7 @@ export default function SuccessStoriesPage() {
       {/* Stats bar */}
       <section className="py-12 border-y" style={{ borderColor: 'var(--sage-pale)', backgroundColor: 'white' }}>
         <div className="container-wide">
-          <div className="grid grid-cols-3 gap-8 text-center">
+          <div className="grid grid-cols-3 gap-4 sm:gap-8 text-center">
             {[
               { stat: '30+', label: 'Years helping clients' },
               { stat: '100%', label: 'Would recommend Jackie' },

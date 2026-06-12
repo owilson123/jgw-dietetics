@@ -33,7 +33,7 @@ export function HowItWorks() {
                   />
                 )}
                 <div
-                  className="text-5xl font-serif font-bold mb-4 leading-none"
+                  className="text-4xl font-serif font-bold mb-4 leading-none"
                   style={{ color: 'rgba(122, 158, 126, 0.4)' }}
                 >
                   {step.number}

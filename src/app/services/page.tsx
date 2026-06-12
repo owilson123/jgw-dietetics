@@ -24,13 +24,13 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-16 pb-16" style={{ backgroundColor: 'var(--off-white)' }}>
+      <section className="pt-10 pb-10 md:pt-16 md:pb-16" style={{ backgroundColor: 'var(--off-white)' }}>
         <div className="container-narrow text-center">
           <FadeIn>
             <p className="text-sm font-semibold tracking-widest uppercase mb-6" style={{ color: 'var(--sage)' }}>
               Areas of Expertise
             </p>
-            <h1 className="text-5xl sm:text-6xl font-serif mb-6 text-balance" style={{ color: 'var(--charcoal)' }}>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif mb-6 text-balance" style={{ color: 'var(--charcoal)' }}>
               Specialist Support for Your Specific Needs
             </h1>
             <p className="text-xl leading-relaxed mb-8" style={{ color: 'var(--charcoal-mid)' }}>
@@ -63,7 +63,7 @@ export default function ServicesPage() {
                   >
                     {/* Left accent */}
                     <div
-                      className="lg:col-span-2 p-10 flex flex-col justify-center min-h-[280px]"
+                      className="lg:col-span-2 p-6 lg:p-10 flex flex-col justify-center"
                       style={{ backgroundColor: colours.bg }}
                     >
                       <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style={{ backgroundColor: 'white' }}>
@@ -86,7 +86,7 @@ export default function ServicesPage() {
                     </div>
 
                     {/* Right content */}
-                    <div className="lg:col-span-3 p-10 bg-white">
+                    <div className="lg:col-span-3 p-6 lg:p-10 bg-white">
                       <p className="text-base leading-relaxed mb-8" style={{ color: 'var(--charcoal-mid)' }}>
                         {service.description}
                       </p>

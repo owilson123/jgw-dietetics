@@ -14,7 +14,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-16 pb-16" style={{ backgroundColor: 'var(--off-white)' }}>
+      <section className="pt-10 pb-10 md:pt-16 md:pb-16" style={{ backgroundColor: 'var(--off-white)' }}>
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Left: Info */}
@@ -22,7 +22,7 @@ export default function ContactPage() {
               <p className="text-sm font-semibold tracking-widest uppercase mb-6" style={{ color: 'var(--sage)' }}>
                 Get in Touch
               </p>
-              <h1 className="text-5xl sm:text-6xl font-serif mb-6 text-balance" style={{ color: 'var(--charcoal)' }}>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif mb-6 text-balance" style={{ color: 'var(--charcoal)' }}>
                 Let's Talk About Your Health Goals
               </h1>
               <p className="text-xl leading-relaxed mb-10" style={{ color: 'var(--charcoal-mid)' }}>
