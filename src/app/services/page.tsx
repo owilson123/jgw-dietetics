@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import { FadeIn } from '@/components/ui/FadeIn'
 import { FinalCTA } from '@/components/sections/FinalCTA'
+import { ServiceIcon } from '@/components/ui/ServiceIcon'
 import { services } from '@/lib/data'
 
 export const metadata: Metadata = {
@@ -65,7 +66,9 @@ export default function ServicesPage() {
                       className="lg:col-span-2 p-10 flex flex-col justify-center min-h-[280px]"
                       style={{ backgroundColor: colours.bg }}
                     >
-                      <div className="text-4xl mb-4">{service.icon}</div>
+                      <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style={{ backgroundColor: 'white' }}>
+                        <ServiceIcon name={service.icon} className="w-6 h-6" style={{ color: colours.accent }} />
+                      </div>
                       <h2 className="text-3xl font-serif mb-3" style={{ color: 'var(--charcoal)' }}>
                         {service.title}
                       </h2>

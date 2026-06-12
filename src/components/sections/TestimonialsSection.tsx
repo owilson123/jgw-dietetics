@@ -76,7 +76,7 @@ export function TestimonialsSection() {
                     className="px-3 py-1.5 rounded-full text-xs font-semibold flex-shrink-0"
                     style={{ backgroundColor: 'rgba(122,158,126,0.2)', color: 'var(--eucalyptus)' }}
                   >
-                    ✓ {t.result}
+                    •  {t.result}
                   </div>
                 </div>
               </div>

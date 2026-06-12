@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { FadeIn } from '@/components/ui/FadeIn'
+import { ServiceIcon } from '@/components/ui/ServiceIcon'
 import { services } from '@/lib/data'
 
 const colourMap: Record<string, { bg: string; border: string; accent: string; tag: string }> = {
@@ -55,10 +56,10 @@ export function ServicesOverview() {
                   {/* Icon + label */}
                   <div className="flex items-start justify-between mb-5">
                     <div
-                      className="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
+                      className="w-11 h-11 rounded-lg flex items-center justify-center flex-shrink-0"
                       style={{ backgroundColor: c.tag }}
                     >
-                      {service.icon}
+                      <ServiceIcon name={service.icon} className="w-5 h-5" style={{ color: c.accent }} />
                     </div>
                     <div
                       className="opacity-0 group-hover:opacity-100 transition-all duration-200 w-8 h-8 rounded-full flex items-center justify-center"

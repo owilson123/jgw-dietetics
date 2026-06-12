@@ -67,7 +67,7 @@ export default function SuccessStoriesPage() {
                     className="inline-flex self-start items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold mb-6"
                     style={{ backgroundColor: 'var(--sage-pale)', color: 'var(--sage)' }}
                   >
-                    ✓ {t.result}
+                    •  {t.result}
                   </div>
 
                   <Quote className="w-5 h-5 mb-4 opacity-25" style={{ color: 'var(--sage)' }} />

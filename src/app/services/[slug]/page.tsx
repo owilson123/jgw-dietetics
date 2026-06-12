@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle2, ArrowLeft } from 'lucide-react'
 import { FadeIn } from '@/components/ui/FadeIn'
 import { FinalCTA } from '@/components/sections/FinalCTA'
+import { ServiceIcon } from '@/components/ui/ServiceIcon'
 import { services } from '@/lib/data'
 
 interface Props {
@@ -57,7 +58,9 @@ export default async function ServicePage({ params }: Props) {
           </FadeIn>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeIn>
-              <div className="text-4xl mb-6">{service.icon}</div>
+              <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6" style={{ backgroundColor: colours.light }}>
+                <ServiceIcon name={service.icon} className="w-7 h-7" style={{ color: colours.accent }} />
+              </div>
               <h1 className="text-5xl sm:text-6xl font-serif mb-5 text-balance" style={{ color: 'var(--charcoal)' }}>
                 {service.title}
               </h1>
@@ -88,12 +91,10 @@ export default async function ServicePage({ params }: Props) {
                 <ul className="space-y-4">
                   {service.symptoms.map((s) => (
                     <li key={s} className="flex items-start gap-3">
-                      <span
-                        className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 text-xs"
-                        style={{ backgroundColor: colours.bg, color: colours.accent }}
-                      >
-                        ✓
-                      </span>
+                      <CheckCircle2
+                        className="w-4 h-4 flex-shrink-0 mt-0.5"
+                        style={{ color: colours.accent }}
+                      />
                       <span className="text-sm leading-relaxed" style={{ color: 'var(--charcoal-mid)' }}>{s}</span>
                     </li>
                   ))}
@@ -191,7 +192,9 @@ export default async function ServicePage({ params }: Props) {
                     className="group block h-full rounded-2xl p-8 transition-all hover:-translate-y-1 hover:shadow-lg"
                     style={{ backgroundColor: c.bg }}
                   >
-                    <div className="text-3xl mb-3">{s.icon}</div>
+                    <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style={{ backgroundColor: 'white' }}>
+                      <ServiceIcon name={s.icon} className="w-5 h-5" style={{ color: c.accent }} />
+                    </div>
                     <h3 className="text-xl font-serif mb-2" style={{ color: 'var(--charcoal)' }}>{s.title}</h3>
                     <p className="text-sm mb-4" style={{ color: 'var(--charcoal-mid)' }}>{s.tagline}</p>
                     <span className="inline-flex items-center gap-1.5 text-sm font-semibold group-hover:gap-2.5 transition-all" style={{ color: c.accent }}>

@@ -5,7 +5,7 @@ export const services = [
     slug: 'ibs-gut-health',
     title: 'IBS & Gut Health',
     shortTitle: 'IBS & Gut Health',
-    icon: '🌿',
+    icon: 'Activity',
     tagline: 'Calm your gut. Reclaim your life.',
     description:
       'Irritable Bowel Syndrome affects millions of people, yet so many suffer in silence without the right support. Jackie provides expert, personalised guidance to help you understand your triggers and find lasting relief.',
@@ -31,7 +31,7 @@ export const services = [
     slug: 'low-fodmap',
     title: 'Low FODMAP Programme',
     shortTitle: 'Low FODMAP',
-    icon: '🥗',
+    icon: 'Leaf',
     tagline: 'The right guidance makes all the difference.',
     description:
       'The Low FODMAP diet is one of the most effective evidence-based approaches for IBS — but it\'s complex and should never be undertaken alone. Jackie guides you through every phase safely and effectively.',
@@ -57,7 +57,7 @@ export const services = [
     slug: 'type-1-diabetes',
     title: 'Type 1 Diabetes',
     shortTitle: 'Type 1 Diabetes',
-    icon: '💙',
+    icon: 'Zap',
     tagline: 'Expert support for complex glucose management.',
     description:
       'Managing Type 1 diabetes through diet requires specialist knowledge. Jackie has extensive NHS experience working with people living with T1D, offering practical strategies that fit real life.',
@@ -83,7 +83,7 @@ export const services = [
     slug: 'type-2-diabetes',
     title: 'Type 2 Diabetes & Prediabetes',
     shortTitle: 'Type 2 Diabetes',
-    icon: '🌱',
+    icon: 'TrendingUp',
     tagline: 'Real change is possible with the right support.',
     description:
       'A Type 2 or prediabetes diagnosis can feel overwhelming — but with the right nutritional guidance, many people achieve remarkable improvements in their blood glucose, energy, and overall health.',
@@ -109,7 +109,7 @@ export const services = [
     slug: 'lifestyle-nutrition',
     title: 'Lifestyle Nutrition Coaching',
     shortTitle: 'Lifestyle Nutrition',
-    icon: '✨',
+    icon: 'Sun',
     tagline: 'Build a healthier relationship with food.',
     description:
       'Not every nutrition goal is medical. Whether you want to eat better, manage your weight, improve your energy, or simply understand nutrition without the noise — Jackie offers expert, jargon-free guidance.',
@@ -135,7 +135,7 @@ export const services = [
     slug: 'family-nutrition',
     title: 'Family Nutrition',
     shortTitle: 'Family Nutrition',
-    icon: '🏡',
+    icon: 'Users',
     tagline: 'Practical nutrition for the whole family.',
     description:
       'Feeding a family is one of the most complex nutrition challenges there is. Jackie understands family life from the inside — offering realistic, practical guidance that works for busy households with varying tastes and needs.',
@@ -161,7 +161,7 @@ export const services = [
     slug: 'glp1-weight-management',
     title: 'GLP-1 Medication & Weight Management',
     shortTitle: 'GLP-1 Support',
-    icon: '⚕️',
+    icon: 'Stethoscope',
     tagline: 'Making the most of your medication through expert nutrition.',
     description:
       'GLP-1 medications such as semaglutide (Wegovy, Ozempic) and tirzepatide (Mounjaro) are increasingly prescribed for weight management and Type 2 diabetes — but medication alone is only part of the picture. Specialist dietetic support is essential to protect muscle mass, manage nutritional intake on a reduced appetite, and build the habits that determine long-term outcomes.',
