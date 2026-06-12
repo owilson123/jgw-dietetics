@@ -158,6 +158,34 @@ export const services = [
     colour: 'sage',
   },
   {
+    slug: 'neuro-rehabilitation',
+    title: 'Neurological Rehabilitation',
+    shortTitle: 'Neuro Rehab',
+    icon: 'Brain',
+    tagline: 'Specialist dietetic support across the neurological rehabilitation journey.',
+    description:
+      'Neurological conditions — including stroke, acquired brain injury, Parkinson\'s disease, multiple sclerosis, and spinal cord injury — place highly specific and often complex demands on nutrition. Jackie brings NHS-level specialist expertise to support patients through rehabilitation and beyond, filling a gap that many find acute when NHS inpatient support ends.',
+    symptoms: [
+      'Swallowing difficulties (dysphagia) affecting safe nutrition',
+      'Unintended weight loss or malnutrition during rehabilitation',
+      'Altered energy needs due to spasticity, paralysis, or fatigue',
+      'Medication and food interactions (e.g. Parkinson\'s protein timing)',
+      'Cognitive or physical difficulties with meal preparation',
+      'Nutritional support following discharge from NHS neuro rehab',
+    ],
+    howHelps:
+      'With over 30 years of NHS experience — including working within multidisciplinary rehabilitation teams — Jackie understands the full clinical picture that neurological conditions present. She provides individualised dietetic assessment and support covering nutritional adequacy, texture-modified dietary guidance for dysphagia, weight and muscle management, and the practical challenges of eating and cooking with a neurological condition. She also works closely with patients transitioning from inpatient NHS neuro rehab into the community, where ongoing specialist dietetic input is often difficult to access on the NHS but remains clinically essential.',
+    outcomes: [
+      'Nutritional status maintained or improved throughout rehabilitation',
+      'Safe eating strategies for those with swallowing difficulties',
+      'Weight and muscle mass managed appropriately for recovery',
+      'Practical meal strategies adapted to physical and cognitive ability',
+      'Continuity of specialist dietetic care post-NHS discharge',
+      'Improved quality of life through evidence-based dietary support',
+    ],
+    colour: 'stone',
+  },
+  {
     slug: 'glp1-weight-management',
     title: 'GLP-1 Medication & Weight Management',
     shortTitle: 'GLP-1 Support',
@@ -442,6 +470,10 @@ export const faqs = [
   {
     q: 'Can consultations be claimed on health insurance?',
     a: 'Many private health insurance policies cover dietitian consultations. Jackie recommends checking with your provider before booking. She can provide receipts and clinical notes for insurance claims.',
+  },
+  {
+    q: 'Can you help with nutrition after a stroke or brain injury?',
+    a: 'Yes. Jackie has extensive NHS experience supporting patients with neurological conditions including stroke, acquired brain injury, Parkinson\'s disease, multiple sclerosis, and spinal cord injury. She provides specialist dietetic support covering nutritional adequacy, dysphagia (swallowing difficulties), weight and muscle management, and the practical challenges of eating with a neurological condition. Many patients find that NHS dietetic input ends at discharge — Jackie\'s private practice can provide the continuity of specialist care that rehabilitation often still requires.',
   },
   {
     q: 'Can you support me if I\'m taking a GLP-1 medication like Ozempic, Wegovy or Mounjaro?',

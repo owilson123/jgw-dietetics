@@ -1,5 +1,5 @@
 import {
-  Activity, Leaf, Zap, TrendingUp, Sun, Users, Stethoscope,
+  Activity, Leaf, Zap, TrendingUp, Sun, Users, Stethoscope, Brain,
   type LucideProps,
 } from 'lucide-react'
 
@@ -11,6 +11,7 @@ const iconMap: Record<string, React.ComponentType<LucideProps>> = {
   Sun,
   Users,
   Stethoscope,
+  Brain,
 }
 
 interface ServiceIconProps extends LucideProps {
