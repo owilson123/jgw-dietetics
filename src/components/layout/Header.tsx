@@ -11,7 +11,7 @@ const navLinks = [
   { href: '/services', label: 'Services' },
   { href: '/programmes', label: 'Pricing' },
   { href: '/success-stories', label: 'Testimonials' },
-  { href: '/resources', label: 'Resources' },
+  { href: '/disclosure', label: 'Disclosure & Privacy' },
   { href: '/contact', label: 'Contact' },
 ]
 
